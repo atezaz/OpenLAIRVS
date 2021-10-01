@@ -1,0 +1,326 @@
+<div
+  *ngIf="
+    dropdownItems.includes(
+      'Student interaction patterns (Relation to performance)'
+    ) || dropdownItems.includes('Student Interaction Patterns')
+  "
+>
+  <app-student-interaction-patterns></app-student-interaction-patterns>
+</div>
+
+<!-- Reading Analytics -->
+<div
+  *ngIf="
+    dropdownItems.includes('Reading analytics') ||
+    dropdownItems.includes('Reading Analytics  Ideal reading material') ||
+    dropdownItems.includes(
+      'Performance rating  Engagement rating  Active reading rating  Attendance rating'
+    )
+  "
+>
+  <app-reading-analytics></app-reading-analytics>
+</div>
+
+<div
+  *ngIf="
+    dropdownItems.includes('Metacognitive Awareness  Competency') ||
+    dropdownItems.includes(
+      'Self regulation  Learning strategies  predict performance  procrastination'
+    ) ||
+    dropdownItems.includes(
+      'Predict performance (by self-regulation metrics)  Self-Regulated Learning'
+    )
+  "
+>
+  <app-competency></app-competency>
+</div>
+
+<div
+  *ngIf="
+    dropdownItems.includes(
+      'Learning Progress (LMS Usage)  student efficiency'
+    ) ||
+    dropdownItems.includes('MOOC completion') ||
+    dropdownItems.includes('User knowledge level')
+  "
+>
+  <app-learning-progress></app-learning-progress>
+</div>
+
+<!-- Writing Analytics -->
+
+<div
+  *ngIf="
+    dropdownItems.includes('Writing analytics  Collaboration network') ||
+    dropdownItems.includes('Writing Engagement') ||
+    dropdownItems.includes('Writing Analysis  Reflective Writing') ||
+    dropdownItems.includes('Affective State  Text Analysis')
+  "
+>
+  <app-writing-analytics></app-writing-analytics>
+</div>
+
+<!-- Discourse Analytics -->
+<div
+  *ngIf="
+    dropdownItems.includes(
+      'Discussion Contribution Quantity & Quality  Reading analytics'
+    ) ||
+    dropdownItems.includes('Discussion forum quality') ||
+    dropdownItems.includes('Discussion Engagements') ||
+    dropdownItems.includes('Exploratory dialogue') ||
+    dropdownItems.includes('Discourse Analysis') ||
+    dropdownItems.includes(
+      'Social Network Analysis (Discussion Forum)  Discourse Analysis'
+    )
+  "
+>
+  <app-discussion-quality></app-discussion-quality>
+</div>
+
+<div *ngIf="dropdownItems.includes('Clickstream Analysis  Student behavior')">
+  <app-clickstream-analysis></app-clickstream-analysis>
+</div>
+
+<!-- Video Analytics -->
+
+<div
+  *ngIf="
+    dropdownItems.includes('Video engagements / analytics') ||
+    dropdownItems.includes('Video analytics (Self-reflection)') ||
+    dropdownItems.includes('Comment analytics (Youtube videos)') ||
+    dropdownItems.includes('Comment Analytics (Youtube Videos)') ||
+    dropdownItems.includes('Video analytics')
+  "
+>
+  <app-video-engagements></app-video-engagements>
+</div>
+
+<div
+  *ngIf="
+    dropdownItems.includes(
+      'Productivity = (Initiative + Responsiveness) / Presence  Collaboration'
+    )
+  "
+>
+  <app-initiative></app-initiative>
+</div>
+
+<div *ngIf="dropdownItems.includes('Social Network analysis')">
+  <app-social-analysis></app-social-analysis>
+</div>
+
+<!--  Predictive analytics (Dropping out )-->
+
+<div
+  *ngIf="
+    dropdownItems.includes('Dropping out') ||
+    dropdownItems.includes('Early Warning  Dropout Prediction') ||
+    dropdownItems.includes('Course Planning  Early Warning') ||
+    dropdownItems.includes('At-Risk Students  Early warning') ||
+    dropdownItems.includes('At-Risk Students  Retention Prediction') ||
+    dropdownItems.includes('At-Risk students  Exam success prediction') ||
+    dropdownItems.includes('At-risk students  Performance')
+  "
+>
+  <app-droppingout></app-droppingout>
+</div>
+
+<div
+  *ngIf="
+    dropdownItems.includes(
+      'Time Distribution  Resource Usage Awareness  Self-reflection'
+    ) ||
+    dropdownItems.includes(
+      'Time Distribution  Resource Usage Awareness  self-reflection'
+    )
+  "
+>
+  <app-time-distribution></app-time-distribution>
+</div>
+
+<div
+  *ngIf="
+    dropdownItems.includes('Collaborative Learning  Time Planning') ||
+    dropdownItems.includes('Temporal Analysis') ||
+    dropdownItems.includes(
+      'Recommendations for successful course completion  Self-regulation  Timeline (status and goal)'
+    )
+  "
+>
+  <app-time-planning></app-time-planning>
+</div>
+
+<div
+  *ngIf="
+    dropdownItems.includes(
+      'Student comparison  Grade prediction  Self-motivation'
+    ) ||
+    dropdownItems.includes('Student performance  Student comparison') ||
+    dropdownItems.includes('Academic performance  Learning strategies') ||
+    dropdownItems.includes('Performance') ||
+    dropdownItems.includes('At-risk students  performance')
+  "
+>
+  <app-student-comparison></app-student-comparison>
+</div>
+
+<div
+  *ngIf="
+    dropdownItems.includes('Engagement and Performance') ||
+    dropdownItems.includes('Engagement')
+  "
+>
+  <app-engagement-performance></app-engagement-performance>
+</div>
+
+<div *ngIf="dropdownItems.includes('Online change detection')">
+  <app-online-change-detection></app-online-change-detection>
+</div>
+
+<!-- Game analytics -->
+<div
+  *ngIf="
+    dropdownItems.includes('Gamification') ||
+    dropdownItems.includes('Badges earned') ||
+    dropdownItems.includes(
+      'Game Based Learning  Learning Strategy (Game)  Predict Performance (Game)'
+    )
+  "
+>
+  <app-gamification></app-gamification>
+</div>
+
+<div *ngIf="dropdownItems.includes('Predict course successful completion')">
+  <app-predict-coursecompletion></app-predict-coursecompletion>
+</div>
+
+<!--  Procrastination  -->
+
+<div
+  *ngIf="
+    dropdownItems.includes('Procrastination  Performance') ||
+    dropdownItems.includes('Procrastination')
+  "
+>
+  <app-procrastination></app-procrastination>
+</div>
+
+<div *ngIf="dropdownItems.includes('Group Participation')">
+  <app-group-participation></app-group-participation>
+</div>
+
+<!-- Clustering -->
+<div
+  *ngIf="
+    dropdownItems.includes('Clustering (educational data mining)') ||
+    dropdownItems.includes('Pass-Fail Classification  Keystroke analytics')
+  "
+>
+  <app-clustering></app-clustering>
+</div>
+
+<div
+  *ngIf="
+    dropdownItems.includes('Final Grade Prediction') ||
+    dropdownItems.includes(
+      'Grade prediction (by performance / Course difficulty level) , Performance , Course difficulty level'
+    ) ||
+    dropdownItems.includes('Predict exam grades') ||
+    dropdownItems.includes('Predict Student Grades') ||
+    dropdownItems.includes('Predict exam success') ||
+    dropdownItems.includes('Performance Prediction  Success Prediction') ||
+    dropdownItems.includes('Success Prediction') ||
+    dropdownItems.includes('Predict academic achievement')
+  "
+>
+  <app-final-grade-prediction></app-final-grade-prediction>
+</div>
+
+<div *ngIf="dropdownItems.includes('Learning behavior')">
+  <app-learning-behaviour></app-learning-behaviour>
+</div>
+
+<div
+  *ngIf="
+    dropdownItems.includes('Long Term Engagement  Social Network Analysis') ||
+    dropdownItems.includes('Online Discussion (forum) Behavior')
+  "
+>
+  <app-social-network-analysis></app-social-network-analysis>
+</div>
+
+<div *ngIf="dropdownItems.includes('Self-motivation  Self-regulated Learning')">
+  <app-self-motivation></app-self-motivation>
+</div>
+
+<div
+  *ngIf="
+    dropdownItems.includes('Learning Behavior Patterns') ||
+    dropdownItems.includes('Learning Patterns') ||
+    dropdownItems.includes('Learning Strategies')
+  "
+>
+  <app-learning-behavior-patterns></app-learning-behavior-patterns>
+</div>
+
+<div
+  *ngIf="
+    dropdownItems.includes(
+      'Passing rate Prediction  Final Grade Prediction  Performance prediction  Awareness'
+    ) ||
+    dropdownItems.includes('predictive analytics (proposal)') ||
+    dropdownItems.includes('Prediction (A pilot study)')
+  "
+>
+  <app-passing-rate-prediction></app-passing-rate-prediction>
+</div>
+
+<!--  Feedback (Self-regulation)-->
+<div *ngIf="dropdownItems.includes('Feedback')">
+  <app-feedback></app-feedback>
+</div>
+
+<div *ngIf="dropdownItems.includes('Course Assessments')">
+  <app-course-assessment></app-course-assessment>
+</div>
+
+<!-- Affective-State -->
+<div
+  *ngIf="
+    dropdownItems.includes('Self-Reported Affective State  Emotion') ||
+    dropdownItems.includes('Affective State') ||
+    dropdownItems.includes('Affective State  Text Analysis') ||
+    dropdownItems.includes('Self-Regulation  Emotional state') ||
+    dropdownItems.includes(
+      'Student progress (LMS activities)  Measure fixed mindset / belonging uncertainty / stereotype threat (Questionnaires)  Alerting  Self-reflection'
+    ) ||
+    dropdownItems.includes(
+      'Student progress (LMS activities)  Measure fixed mindset / Belonging uncertainty / Stereotype threat (Questionnaires)  Alerting  Self-reflection'
+    )
+  "
+>
+  <app-affective-state></app-affective-state>
+</div>
+
+<!-- Course difficulty -->
+<div
+  *ngIf="
+    dropdownItems.includes('Course difficulty') ||
+    dropdownItems.includes(
+      'Perceived difficulty  Self-efficacy  Cognitive load'
+    )
+  "
+>
+  <app-course-difficulty></app-course-difficulty>
+</div>
+
+<div
+  *ngIf="
+    dropdownItems.includes(
+      'Teacher curriculum usage  Curriculum Planning / designing'
+    ) || dropdownItems.includes('Content quality')
+  "
+>
+  <app-curriculum-usage></app-curriculum-usage>
+</div>

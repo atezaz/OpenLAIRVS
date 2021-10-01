@@ -1,0 +1,14 @@
+<SELECT id="list" (change)="updateChart($event)">
+  <option VALUE="A">Average grade so far</option>
+  <option VALUE="B">Lecture attendance</option>
+  <option VALUE="C">"Coursework" clicks</option>
+  <option VALUE="D">"Practials" clicks</option>
+  <option value="E">Seen content</option>
+</SELECT>
+<div class="example">
+  <highcharts-chart
+    [Highcharts]="Highcharts"
+    [options]="chartOptions"
+    style="width: 50%; height: 500px; display: block; float: left"
+  ></highcharts-chart>
+</div>

@@ -1,0 +1,14 @@
+<SELECT id="list" (change)="updateChart($event)">
+    <option VALUE="A">Clicks</option>
+    <option VALUE="B">"Lectures" clicks</option>
+    <option VALUE="C">"Coursework" clicks</option>
+    <option VALUE="D">"Practials" clicks</option>    
+    <option value="E">Seen content</option>
+</SELECT>
+<div class="example" *ngIf="loadChart">
+    <highcharts-chart
+      [Highcharts]="Highcharts"
+      [options]="chartOptions"
+      style="width: 50%; height: 400px; display: block; float: left"
+    ></highcharts-chart>
+  </div>
