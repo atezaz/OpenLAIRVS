@@ -18,9 +18,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.dropdownItems = JSON.parse(localStorage.getItem("selectedIndicators"));
-
     this.components = this.dropdownItems;
-    console.log(this.components);
   }
 
   downloadPage() {
@@ -41,6 +39,9 @@ export class DashboardComponent implements OnInit {
 
     .footer {
       display: block !important;
+    }
+    .backBtn {
+      display:none;
     }
 
    

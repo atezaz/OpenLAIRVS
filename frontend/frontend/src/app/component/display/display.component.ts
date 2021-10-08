@@ -192,7 +192,6 @@ export class DisplayComponent implements OnInit {
       this.data = data;
       if (localStorage.getItem("check")) {
         this.data = JSON.parse(localStorage.getItem("check"));
-        console.log("Data", this.data);
       }
       this.isLoaded = true;
       if (p == "Select All") {
@@ -369,16 +368,22 @@ export class DisplayComponent implements OnInit {
   backToTop() {
     this.element.scrollIntoView({ behavior: "smooth" });
   }
-  forwardIndicators = (x) => {
-    this.dataService.selectedIndicators = x;
 
+  forwardIndicators = (x) => {
     let indicators = [];
+    let indicatorReferences = [];
+    let regex = /\[[0-9]+\]/;
     for (const ind of this.ind_list) {
-      indicators.push(ind.replace(/\[\d*\]/g, "").trim());
+      indicatorReferences.push(ind.match(regex)[0]);
+      indicators.push(ind);
     }
 
     this.chartHelperService.setSettings("selectedIndicators", indicators);
-    if (this.dataService.selectedIndicators.length > 0) {
+    this.chartHelperService.setSettings(
+      "referenceNumbers",
+      indicatorReferences
+    );
+    if (indicators.length > 0) {
       localStorage.setItem("check", JSON.stringify(this.data));
       this.router.navigate(["/dashboard"]);
     } else {

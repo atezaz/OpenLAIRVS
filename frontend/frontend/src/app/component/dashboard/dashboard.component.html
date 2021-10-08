@@ -7,26 +7,6 @@
   Back
 </button>
 
-<mat-form-field appearance="fill">
-  <mat-select
-    [formControl]="indicators"
-    multiple
-    placeholder="Indicators"
-    [ngModel]="dropdownItems"
-  >
-    <mat-select-trigger>
-      {{ indicators.value ? indicators.value[0] : "" }}
-      <span *ngIf="indicators.value?.length > 1" class="selection">
-        (+{{ indicators.value.length - 1 }}
-        {{ indicators.value?.length === 2 ? "other" : "others" }})
-      </span>
-    </mat-select-trigger>
-    <mat-option *ngFor="let indicator of dropdownItems" [value]="indicator">{{
-      indicator
-    }}</mat-option>
-  </mat-select>
-</mat-form-field>
-
 <button
   class="downloadCharts"
   mat-raised-button
@@ -35,8 +15,7 @@
 >
   Download
 </button>
-<app-chart-manager *ngIf="components" [component]="component">
-</app-chart-manager>
+<app-chart-manager> </app-chart-manager>
 
 <div class="footer">
   <p>Dashboard is rendered from OpenLAIR.</p>
